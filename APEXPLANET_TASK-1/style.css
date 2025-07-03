@@ -1,0 +1,155 @@
+/*
+    This file contains all the CSS (Cascading Style Sheets) rules for your webpage.
+    It's linked to 'index.html' via: <link rel="stylesheet" href="style.css">
+    Ensure this file is named 'style.css' and is in the same folder as 'index.html'.
+*/
+
+/* General Body Styling */
+body {
+    font-family: 'Roboto', sans-serif; /* A clean, modern sans-serif font */
+    margin: 0;
+    padding: 40px; /* More generous padding around content */
+    background: linear-gradient(to bottom right, #e0f2f7, #bbdefb); /* Soft blue gradient */
+    color: #333;
+    line-height: 1.7;
+    text-align: center; /* Center align all main content */
+    animation: fadeIn 1.5s ease-out; /* Gentle fade-in animation for the page */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Container for Content */
+.container {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white background */
+    border-radius: 15px; /* More rounded corners */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Softer, larger shadow */
+}
+
+/* Headings */
+h1, h2 {
+    font-family: 'Playfair Display', serif; /* An elegant, serif font for headings */
+    color: #4a148c; /* Deep purple for headings */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.05);
+    margin-bottom: 25px;
+}
+
+h1 {
+    font-size: 3.2em; /* Larger main heading */
+    letter-spacing: 2px; /* A little more space between letters */
+    border-bottom: 2px solid #d1c4e9; /* A subtle bottom border */
+    padding-bottom: 10px;
+    display: inline-block; /* Makes border only as wide as text */
+}
+
+h2 {
+    font-size: 2.2em;
+    margin-top: 40px; /* More space above subheadings */
+    color: #673ab7; /* Lighter purple for subheadings */
+}
+
+/* Paragraphs */
+p {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Images */
+img {
+    max-width: 80%; /* Slightly smaller max-width */
+    height: auto;
+    border: 5px solid #fff; /* White border */
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* More prominent shadow */
+    transition: transform 0.3s ease-in-out; /* Smooth hover effect */
+    margin: 30px 0;
+    display: block; /* Ensure it's a block for centering */
+    margin-left: auto; /* Center image */
+    margin-right: auto; /* Center image */
+}
+
+img:hover {
+    transform: scale(1.02); /* Slightly zoom in on hover */
+}
+
+/* Lists */
+ul {
+    list-style: none; /* Remove default bullet points */
+    padding: 0;
+    margin: 30px 0;
+    display: inline-block; /* Center the list itself */
+}
+
+li {
+    padding: 8px 0;
+    font-size: 1.1em;
+    color: #444;
+    position: relative; /* For custom bullet */
+    text-align: left; /* Align list items to the left within the centered ul */
+    padding-left: 25px; /* Space for custom bullet */
+}
+
+li::before {
+    content: "✨"; /* Custom sparkling bullet point */
+    position: absolute;
+    left: 0;
+    color: #fdd835; /* Gold color for sparkle */
+}
+
+/* Links */
+a {
+    color: #00796b; /* Teal color for links */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+}
+
+a:hover {
+    color: #004d40; /* Darker teal on hover */
+    text-decoration: underline;
+    text-shadow: 0 0 5px rgba(0, 121, 107, 0.3); /* Subtle glow on hover */
+}
+
+/* Interactive Button */
+#magicButton {
+    display: inline-block; /* Keep it inline-block for precise centering within text flow */
+    margin-top: 40px;
+    padding: 15px 30px;
+    font-size: 1.3em;
+    font-weight: bold;
+    background-color: #ff5722; /* Vibrant orange */
+    color: white;
+    border: none;
+    border-radius: 50px; /* Pill-shaped button */
+    box-shadow: 0 8px 15px rgba(255, 87, 34, 0.4); /* Glowing shadow */
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease, box-shadow 0.3s ease;
+    letter-spacing: 1px;
+    outline: none; /* Remove outline on focus */
+}
+
+#magicButton:hover {
+    background-color: #e64a19; /* Darker orange on hover */
+    transform: translateY(-3px); /* Lift effect on hover */
+    box-shadow: 0 12px 20px rgba(255, 87, 34, 0.6); /* More intense shadow on hover */
+}
+
+#magicButton:active {
+    transform: translateY(0); /* Press down effect */
+    box-shadow: 0 5px 10px rgba(255, 87, 34, 0.3);
+}
+
+/* Footer for extra flair */
+.footer {
+    margin-top: 60px;
+    font-size: 0.9em;
+    color: #777;
+    padding-top: 20px;
+    border-top: 1px dashed #c5cae9;
+}
